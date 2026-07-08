@@ -1,0 +1,25 @@
+button {
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 20px;
+  align-self: self-end;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: transform 0.9s ease;
+}
+
+button:hover {
+  transform: rotate(180deg);
+}

@@ -1,0 +1,38 @@
+li {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin: 20px auto;
+  color: black;
+}
+
+li span {
+  cursor: pointer;
+
+
+}
+
+.completar {
+  width: 20px;
+  height: 20px;
+  fill: green;
+   margin-right: 10px;
+}
+
+
+.eliminar:hover {
+  fill: red;
+}
+
+.marcado {
+  text-decoration: line-through;
+}
+
+.terminado {
+  background-color: greenyellow;
+}
