@@ -1,14 +1,14 @@
 import {CompleteIcon} from './CompleteIcon.jsx'
 import {DeleteIcon} from './DeleteIcon.jsx'
 
-import './estilos/TodoItem.css'
+import './TodoItem.css'
 
 function ToDoItem(props) {
   return (
     <li className={`${props.completed?'terminado':''}`}>
-      <CompleteIcon onClick={props.onComplete}/>
+      <CompleteIcon onComplete={props.onComplete} completed={props.completed}/>
       <p className={`${props.completed ? "marcado" : ""}`}>{props.texto}</p>
-      <DeleteIcon onClick={props.onDelete}/>
+      <DeleteIcon onDelete={props.onDelete}/>
     </li>
   );
 }

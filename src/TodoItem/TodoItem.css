@@ -9,30 +9,25 @@ li {
   padding: 10px 15px;
   margin: 20px auto;
   color: black;
+  transition: all 0.4s ease-in-out;
 }
 
-li span {
-  cursor: pointer;
-
-
+li:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .completar {
   width: 20px;
   height: 20px;
-  fill: green;
-   margin-right: 10px;
+  margin-right: 10px;
 }
 
-
-.eliminar:hover {
-  fill: red;
-}
 
 .marcado {
   text-decoration: line-through;
 }
 
 .terminado {
-  background-color: greenyellow;
+  background-color: rgba(157, 241, 142, 0.969);
 }

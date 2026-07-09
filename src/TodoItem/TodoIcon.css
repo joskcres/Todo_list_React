@@ -1,0 +1,11 @@
+span {
+  cursor: pointer;
+}
+
+.completar:hover svg {
+  fill: green;
+}
+
+.eliminar:hover svg{
+  fill: red;
+}

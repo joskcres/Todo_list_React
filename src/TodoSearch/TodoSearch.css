@@ -12,9 +12,9 @@ input {
 }
 
 input::placeholder {
-    color: #aaa;
+    color: #a9a7a7;
 }
 
 input:focus {
-    border-color: #6a0dad;
+    border-color: #194885;
 }

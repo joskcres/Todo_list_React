@@ -1,25 +1,20 @@
 import React from 'react'
-import { ToDoCounter } from './TodoCounter'
-import { ToDoSearch } from './TodoSearch'
-import { ToDoList } from './TodoList'
-import { ToDoButton } from './TodoButton'
-import { ToDoItem } from './TodoItem'
-
-const defaultTodo = [{ texto: "Ver a Messi en el mundial", completed: true },
-{ texto: "acabar el curso de React", completed: false },
-{ texto: 'Cortar Cebollas', completed: true },
-{ texto: 'Armar legos', completed: false }]
+import { ToDoCounter } from '../TodoCounter'
+import { ToDoSearch } from '../TodoSearch'
+import { ToDoList } from '../TodoList'
+import { ToDoButton } from '../TodoButton'
+import { ToDoItem } from '../TodoItem'
+import { useLocalStorage } from './useLocalStorage'
 
 function App() {
-  const [todos, setTodos] = React.useState(defaultTodo);
+
+  const [todos, saveTodos] = useLocalStorage('TODO_V1',[]);
 
   const [searchValue, setSearchValue] = React.useState('');
 
   const completedTodo = todos.filter(todo => todo.completed).length;
 
   const totalTodos = todos.length
-  
-
 
   const searchedTodo = todos.filter((todo) => {
     return todo.texto.toLowerCase().includes(searchValue.toLowerCase())
@@ -29,14 +24,14 @@ function App() {
     const newTodos = [...todos];
     const todoIndex = newTodos.findIndex(todo => todo.texto == texto)
     newTodos[todoIndex].completed = true
-    setTodos(newTodos)
+    saveTodos(newTodos)
   }
 
   const deleteTodo = (texto) => {
     const newTodos = [...todos];
     const todoIndex = newTodos.findIndex(todo => todo.texto == texto)
-    newTodos.splice(todoIndex,1)
-    setTodos(newTodos)
+    newTodos.splice(todoIndex, 1)
+    saveTodos(newTodos)
   }
 
   return (

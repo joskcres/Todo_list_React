@@ -1,5 +1,5 @@
 import React from 'react'
-import './estilos/TodoSearch.css'
+import './TodoSearch.css'
 
 function ToDoSearch({ searchValue,
   setSearchValue
@@ -7,6 +7,7 @@ function ToDoSearch({ searchValue,
 
   return (
     <input placeholder="Cortar Cebolla"
+      id='TodoSearch'
       value={searchValue}
       onChange={(event) => {
         setSearchValue(event.target.value)
