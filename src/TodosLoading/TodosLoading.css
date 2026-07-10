@@ -1,0 +1,50 @@
+.LoadingTodo-container {
+  padding: 10px 15px;
+  width: 80%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin: 20px auto;
+  color: transparent; /* oculta texto real */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animación shimmer */
+.LoadingTodo-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150px;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(250px);
+  }
+}
+
+.LoadingTodo-completeIcon,
+.LoadingTodo-deleteIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+}
+
+.LoadingTodo-text {
+  flex: 1;
+  height: 16px;
+  margin: 0 10px;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+}
