@@ -1,20 +1,28 @@
-input {
-    padding: 10px 15px;
-    border-radius: 6px;
-    background-color: #efefef;
-    color: #000000;
+#TodoSearch {
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #333;
     font-size: 1rem;
     outline: none;
-    margin: 0 auto;
+    margin: 20px auto;
     width: 70%;
-    border: solid 4px rgb(139, 120, 195) ;
+    border: 3px solid transparent;
     text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
-input::placeholder {
-    color: #a9a7a7;
+/* Placeholder más elegante */
+#TodoSearch::placeholder {
+    color: #999;
+    font-style: italic;
 }
 
-input:focus {
-    border-color: #194885;
+/* Efecto al enfocar */
+#TodoSearch:focus {
+    border: 3px solid #6a5acd; /* morado vibrante */
+    box-shadow: 0 0 10px rgba(106, 90, 205, 0.6);
+    background: #fdfdfd;
+    transform: scale(1.02);
 }

@@ -1,4 +1,4 @@
-button {
+.btn-Crear{
   right: 30px;
   width: 60px;
   height: 60px;
@@ -20,6 +20,6 @@ button {
   transition: transform 0.9s ease;
 }
 
-button:hover {
-  transform: rotate(2180deg);
+.btn-Crear:hover {
+  transform: rotate(270deg);
 }

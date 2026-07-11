@@ -1,0 +1,107 @@
+/* Overlay con efecto suave */
+.ModalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px); /* efecto difuminado */
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Caja del modal */
+.ModalContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    max-width: 420px;
+    width: 90%;
+    z-index: 1;
+    gap: 20px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Título */
+.ModalTitle {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #444;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Input estilizado */
+.ModalInput {
+    width: 85%;
+    padding: 12px;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.ModalInput:focus {
+    border-color: #2196F3;
+    box-shadow: 0 0 6px rgba(33, 150, 243, 0.5);
+}
+
+/* Botones */
+.ModalButtons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+}
+
+.BtnClose,
+.BtnCreate {
+    flex: 1;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+/* Botón cerrar */
+.BtnClose {
+    background: #f44336;
+    color: #fff;
+}
+
+.BtnClose:hover {
+    background: #d32f2f;
+    transform: scale(1.05);
+}
+
+/* Botón crear */
+.BtnCreate {
+    background: linear-gradient(135deg, #4CAF50, #2e7d32);
+    color: #fff;
+}
+
+.BtnCreate:hover {
+    background: linear-gradient(135deg, #43a047, #1b5e20);
+    transform: scale(1.05);
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        transform: translateY(-15px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
